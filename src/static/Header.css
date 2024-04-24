@@ -1,0 +1,67 @@
+.Header{
+    position:sticky;
+    width:100%;
+    margin:0;
+    padding:0%;
+}
+
+div {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+}
+a{
+   width: 5%;
+}
+img{
+    width:100%;
+}
+
+.LogoAccount{
+    width:5%;
+    margin:0 1% 0 0;
+}
+
+.popAccount{
+    flex-direction: column;
+    width: 10%;
+    position : absolute;
+    top: 80%;
+    right: 1%;
+    background-color: #D3E7A6;
+    border: 2px solid #8DB654;
+    border-radius:30px;
+}
+.popAccount a{
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.popAccount a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 996px){
+    a{
+        width: 10%;
+    }
+    img{
+         width:100%;
+         margin :10%;
+    }
+    .LogoAccount{
+         width:10%;
+         margin:0%;
+    }
+
+    .popAccount{
+        width: 20%;
+    }
+    h1{
+        font-size:1.2em
+    }
+
+}

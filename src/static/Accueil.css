@@ -1,0 +1,137 @@
+.Main_accueil{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+h1, h2{
+    margin:0
+}
+.Main_accueil .top{
+    text-align: center;
+    margin-bottom: 20px;
+    width:100%;
+    height:500px;
+    background-image: url('../static/blob.svg');
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-attachment:local;
+    font-size: 1.3em;
+    font-weight: 500;
+    font-family: "Roboto Mono", monospace;
+}
+.Main_accueil .top .left{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width:50%;
+}
+.Main_accueil .top .left p{
+    width:70%;
+    margin:auto;
+    padding:20px;
+}
+.Main_accueil a{
+    width:50%;
+    padding:10px;
+}
+.Main_accueil button{
+    height:50px;
+    background-color: #e2f0bd;
+    border: 2px solid #C2DA91;
+}
+.Main_accueil button:hover{
+    height:50px;
+    background-color: #E2F0BD;
+    border: 2px solid #8DB654;
+    box-shadow: 2px 2px 2px 2px rgba(8F,DC,00,3);
+}
+.Main_accueil .top .right{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width:50%;
+}
+.Main_accueil .top .right div{
+    display:flex;
+    flex-direction: column;
+}
+.Main_accueil .top .right img{
+    width:50%;
+    height:auto;
+}
+
+.Main_accueil .top .right .pret{
+    grid-row: 1 / 3;
+}
+
+
+.Main_accueil .bottom{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    width:100%;
+    font-size:1em;
+    font-weight: 500;
+    font-family: "Roboto Mono", monospace;
+}
+.Main_accueil .bottom iframe{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width:60%;
+    height:500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.Main_accueil .bottom .right{
+    display:flex;
+    flex-direction: column;
+    width:40%;
+}
+.Main_accueil .bottom .right h2{
+    margin-bottom:20px;
+    font-weight: 600;
+}
+.Main_accueil .bottom .right p{
+    margin:5px;
+}
+.Main_accueil .bottom .right .mail{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 996px){
+    .Main_accueil .top{
+        display:flex;
+        flex-direction: column;
+        background-image: url('');
+        height:auto;
+    }
+    .Main_accueil .top .left{
+        width:100%;
+    }
+    .Main_accueil .top .left p{
+        width:80%;
+        font-size: 0.7em;
+    }
+    .Main_accueil .top .right{
+        display:flex;
+        width:100%;
+    }
+    .Main_accueil .bottom iframe{
+        width:90%;
+        height:200px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    .Main_accueil .bottom .right{
+        display:flex;
+        flex-direction: column;
+        width:80%;
+    }
+    .Main_accueil button{
+        height:70px;
+        background-color: #e2f0bd;
+        border: 2px solid #C2DA91;
+    }
+}
