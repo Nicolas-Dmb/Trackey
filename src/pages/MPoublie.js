@@ -9,7 +9,7 @@ function MPoublie({setTitle}){
 
     let sendEmail = async(e ) =>{
         e.preventDefault()
-        let response = await fetch('https://apitrackey.fr/api/MPoublie/get',{
+        let response = await fetch('https://www.apitrackey.fr/api/MPoublie/get',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'},

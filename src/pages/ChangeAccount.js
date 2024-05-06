@@ -36,7 +36,7 @@ function ChangeAccount({setTitle}){
    //Modifier les informations 
    let patchAccount = async(e ) => {
     e.preventDefault();
-    let response = await fetch('https://apitrackey.fr/api/user/update',{
+    let response = await fetch('https://www.apitrackey.fr/api/user/update',{
         method: 'PATCH',
         headers:{
             'Content-Type': 'application/json',

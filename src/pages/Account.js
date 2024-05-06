@@ -18,7 +18,7 @@ function Account({setTitle}){
 
     //récupérer les infos du compte
     let getAccount = async() =>{
-        let response = await fetch(`https://apitrackey.fr/api/user/account`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/user/account`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

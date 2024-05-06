@@ -12,7 +12,7 @@ function NewMP({setTitle}){
     
     let putPassword = async(e ) => {
         e.preventDefault()
-        let response = await fetch(`https://apitrackey.fr/api/MPoublie/post`, {
+        let response = await fetch(`https://www.apitrackey.fr/api/MPoublie/post`, {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'},

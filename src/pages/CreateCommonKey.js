@@ -26,7 +26,7 @@ function CreateCommonKey({setTitle}){
         formData.append('id_Agency', user.user_id);
         formData.append('available', 'True');
         formData.append('id_Copro', IdCopropriete);
-        let response = await fetch('https://apitrackey.fr/api/CommonKey/',{
+        let response = await fetch('https://www.apitrackey.fr/api/CommonKey/',{
             method:'POST',
             headers:{
                 'Authorization':`Bearer ${authTokens.access}`},

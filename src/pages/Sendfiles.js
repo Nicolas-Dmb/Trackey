@@ -16,7 +16,7 @@ function CreateManyCopro({setTitle}){
         e.preventDefault();
         let formData = new FormData();
         formData.append('file', e.target.file.files[0]);
-        let response = await fetch('https://apitrackey.fr/api/filecopro',{
+        let response = await fetch('https://www.apitrackey.fr/api/filecopro',{
             method:'POST',
             headers:{
                 'Authorization': `Bearer ${authTokens.access}`},

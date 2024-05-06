@@ -25,7 +25,7 @@ function DetailPrivateKey({setTitle}){
     const {copropriete} = location.state || {}
 
     let getKey = async() =>{
-        let response = await fetch (`https://apitrackey.fr/api/PrivateKey/${IdKey}`,{
+        let response = await fetch (`https://www.apitrackey.fr/api/PrivateKey/${IdKey}`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

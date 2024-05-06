@@ -15,7 +15,7 @@ function CreateCopro({setTitle}){
 
     let CreateCopro = async(e ) =>{
         e.preventDefault();
-        let response = await fetch('https://apitrackey.fr/api/Copropriete/',{
+        let response = await fetch('https://www.apitrackey.fr/api/Copropriete/',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',

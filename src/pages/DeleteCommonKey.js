@@ -22,7 +22,7 @@ function DeleteCommonKey({setTitle}){
    //Modifier les informations 
    let deleteKey = async(e) =>{
     e.preventDefault()
-    let response = await fetch(`https://apitrackey.fr/api/CommonKey/${IdKey}/`,{
+    let response = await fetch(`https://www.apitrackey.fr/api/CommonKey/${IdKey}/`,{
         method:'DELETE',
         headers:{
                 'Content-Type':'application/json',

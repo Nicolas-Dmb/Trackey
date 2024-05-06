@@ -22,7 +22,7 @@ function DeleteAccount({setTitle}){
    //Modifier les informations 
    let deleteAccount = async(e) =>{
         e.preventDefault()
-        let response = await fetch('https://apitrackey.fr/api/user/delete',{
+        let response = await fetch('https://www.apitrackey.fr/api/user/delete',{
             method:'DELETE',
             headers:{
                     'Content-Type':'application/json',

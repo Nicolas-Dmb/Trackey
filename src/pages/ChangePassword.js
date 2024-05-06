@@ -34,7 +34,7 @@ function ChangePassword({setTitle}){
     
     let putPassword = async(e ) => {
         e.preventDefault()
-        let response = await fetch(`https://apitrackey.fr/api/user/password`, {
+        let response = await fetch(`https://www.apitrackey.fr/api/user/password`, {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json',

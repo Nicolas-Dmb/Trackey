@@ -22,7 +22,7 @@ function DeletePrivateKey({setTitle}){
    //Modifier les informations 
    let deleteKey = async(e) =>{
     e.preventDefault()
-    let response = await fetch(`https://apitrackey.fr/api/PrivateKey/${IdKey}/`,{
+    let response = await fetch(`https://www.apitrackey.fr/api/PrivateKey/${IdKey}/`,{
         method:'DELETE',
         headers:{
                 'Content-Type':'application/json',

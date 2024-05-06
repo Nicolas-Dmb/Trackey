@@ -29,7 +29,7 @@ function ModifPrivateKey({setTitle}){
         formData.append('available', key.available);
         formData.append('qr_code', key.qr_code);
         formData.append('id_Copro', IdCopropriete);
-        let response = await fetch(`https://apitrackey.fr/api/PrivateKey/${IdKey}/`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/PrivateKey/${IdKey}/`,{
             method:'PATCH',
             headers:{
                 'Authorization': `Bearer ${authTokens.access}`},

@@ -23,7 +23,7 @@ function DetailCommonKey({setTitle}){
     const {copropriete} = location.state || {}
 
     let getKey = async() =>{
-        let response = await fetch (`https://apitrackey.fr/api/CommonKey/${IdKey}`,{
+        let response = await fetch (`https://www.apitrackey.fr/api/CommonKey/${IdKey}`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

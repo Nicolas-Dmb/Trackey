@@ -15,7 +15,7 @@ function CreateTrackCommon({setTitle}){
     const navigate = useNavigate()
 
     let getTrack = async() =>{
-        let response = await fetch(`https://apitrackey.fr/api/TrackC/update/${IdKey}/`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/TrackC/update/${IdKey}/`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -34,7 +34,7 @@ function CreateTrackCommon({setTitle}){
 
     let CreateTrack = async(e ) =>{
         e.preventDefault();
-        let response = await fetch(`https://127.0.0.1:8000/api/TrackCommon/`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/TrackCommon/`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',

@@ -16,7 +16,7 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async(e )=> {
         e.preventDefault();
-        let response = await fetch('https://apitrackey.fr/api/token/',{
+        let response = await fetch('https://www.apitrackey.fr/api/token/',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'},
@@ -34,7 +34,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let updateToken = async() => {
-        let response = await fetch('https://apitrackey.fr/api/token/refresh/',{
+        let response = await fetch('https://www.apitrackey.fr/api/token/refresh/',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'},
@@ -67,7 +67,7 @@ export const AuthProvider = ({children}) => {
     //Create Account
     let newAccount= async(e ) => {
         e.preventDefault();
-        let response = await fetch('https://apitrackey.fr/api/user/create',{
+        let response = await fetch('https://www.apitrackey.fr/api/user/create',{
         method:'POST', 
         headers:{
             'Content-Type':'application/json'},
@@ -87,7 +87,7 @@ export const AuthProvider = ({children}) => {
 
     //OTP
     let sendOTP= async() =>{
-        let response = await fetch('https://apitrackey.fr/api/otp',{
+        let response = await fetch('https://www.apitrackey.fr/api/otp',{
             method: 'GET', 
             headers:{
                 'Content-Type':'application/json', 

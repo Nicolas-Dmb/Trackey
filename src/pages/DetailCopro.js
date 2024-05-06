@@ -14,7 +14,7 @@ function DetailCopro({setTitle}){
     const[privatekeys, setPrivatekeys] = useState([])
 
     let getCopropriete = async() =>{
-        let response = await fetch(`https://apitrackey.fr/api/Copropriete/${IdCopropriete}`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/Copropriete/${IdCopropriete}`,{
             method:'GET',
             headers:{
                     'Content-Type':'application/json',

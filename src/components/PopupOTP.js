@@ -15,7 +15,7 @@ function PopupOTP({setPopup, verif_mail}){
 
     let verifyOTP = async(e ) =>{
         e.preventDefault()
-        let response = await fetch('https://apitrackey.fr/api/otp/verify',{
+        let response = await fetch('https://www.apitrackey.fr/api/otp/verify',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json', 

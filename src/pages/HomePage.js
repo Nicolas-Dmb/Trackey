@@ -27,7 +27,7 @@ function HomePage({setTitle}){
     },[coproprietes])
 
     let getCopro = async() =>{
-        let response = await fetch('https://apitrackey.fr/api/Copropriete/',{
+        let response = await fetch('https://www.apitrackey.fr/api/Copropriete/',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -41,7 +41,7 @@ function HomePage({setTitle}){
                 alert("Créer vos premières copropriétés avec le bouton 'Plus'👇");
             }}
     let getUser = async() =>{
-        let response = await fetch(`https://apitrackey.fr/api/user/account`,{
+        let response = await fetch(`https://www.apitrackey.fr/api/user/account`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

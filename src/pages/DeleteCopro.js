@@ -22,7 +22,7 @@ function DeleteCopro({setTitle}){
    //Modifier les informations 
    let deleteCopropriete = async(e) =>{
     e.preventDefault()
-    let response = await fetch(`https://apitrackey.fr/api/Copropriete/${IdCopropriete}`,{
+    let response = await fetch(`https://www.apitrackey.fr/api/Copropriete/${IdCopropriete}`,{
         method:'DELETE',
         headers:{
                 'Content-Type':'application/json',

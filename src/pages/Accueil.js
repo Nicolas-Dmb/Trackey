@@ -6,7 +6,7 @@ import cle from '../static/clé.png'
 import pret from '../static/Pret_cle.png'
 function Accueil({setTitle}){
     useEffect(()=>{
-        setTitle( <h1>Bienvenu sur Trackey ! 🗝️</h1>)
+        setTitle( <h1>Bienvenue sur Trackey ! 🗝️</h1>)
     },[])
     
     return (
