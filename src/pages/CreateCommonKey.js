@@ -9,6 +9,7 @@ function CreateCommonKey({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
     let{user}= contextData
+    let{logoutUser} = contextData;
     //id copro
     const {IdCopropriete} = useParams()
     //info copro
@@ -35,7 +36,9 @@ function CreateCommonKey({setTitle}){
         await response.json()
         if (response.ok) {
             navigate(`/Copropriete/${IdCopropriete}`)
-        } else {
+        } else if(response.status===401){
+            logoutUser()
+        }else {
             alert(`Numéro déjà utilisé`);
         }
     }

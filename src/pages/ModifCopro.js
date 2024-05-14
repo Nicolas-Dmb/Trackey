@@ -6,6 +6,7 @@ function ModifCopro({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
     let{user}= contextData
+    let{logoutUser} = contextData
     //Copropriete
     const location = useLocation()
     const {copropriete} = location.state || {}
@@ -29,6 +30,8 @@ function ModifCopro({setTitle}){
         await response.json()
         if (response.ok){
             setfirstRender(false)
+        }else if (response.status===401){
+            logoutUser()
         }else{
             alert('Erreur: Numéro déjà utilisé');
         }

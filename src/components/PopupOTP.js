@@ -8,6 +8,7 @@ function PopupOTP({setPopup, verif_mail}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
     let{sendOTP} = contextData; 
+    let{logoutUser} = contextData;
     
     useEffect(() =>{
         sendOTP()
@@ -28,6 +29,8 @@ function PopupOTP({setPopup, verif_mail}){
         }else if(response.status === 408){
             sendOTP()
             alert('Temps écoulé, mail renvoyé');
+        }else if(response.status === 408){
+            logoutUser()
         }else{
             const data = await response.json();
             alert(data.error);

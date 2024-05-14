@@ -14,6 +14,7 @@ function HomePage({setTitle}){
 
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     const[copros, setCopros]=useState([])
     const[coproprietes, setCoproprietes] = useState([]) //les valeurs de copros sont stockées pour les récupérers si copros est changés et qu'on veut la reinitialisé
     const[popup, setPopup] = useState(false)
@@ -37,7 +38,9 @@ function HomePage({setTitle}){
             if (Array.isArray(data)) {
                 setCopros(data); 
                 setCoproprietes(data);
-            } else {
+            } else if (response.status===401){
+                logoutUser()
+            }else {
                 alert("Créer vos premières copropriétés avec le bouton 'Plus'👇");
             }}
     let getUser = async() =>{
@@ -50,7 +53,9 @@ function HomePage({setTitle}){
             let data = await response.json()
             if (data.email_verif === false) {
                 setPopup(true)
-            } 
+            } else if (response.status===401){
+                logoutUser()
+            }
     }
     return(popup? (<PopupOTP setPopup={setPopup} verif_mail={true}/>)
         :(

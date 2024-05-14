@@ -9,6 +9,7 @@ function ChangeAccount({setTitle}){
 
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     const[popup, setPopup] = useState(true)
     //information du compte 
     const location = useLocation()
@@ -52,6 +53,8 @@ function ChangeAccount({setTitle}){
     }else if(response.status === 408){
         //si otp invalide
         setPopup(true)
+    }else if(response.status===401){
+        logoutUser()
     }else if(response.status === 406){
         alert('Adresse mail déjà utilisée')
     }else{

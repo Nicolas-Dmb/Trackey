@@ -10,6 +10,7 @@ function CreateCopro({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
     let{user}= contextData
+    let{logoutUser} = contextData;
 
     const navigate = useNavigate()
 
@@ -26,7 +27,9 @@ function CreateCopro({setTitle}){
             if (response.ok) {
                 alert("La copropriete a bien été créée ! 🏢")
                 navigate('/Homepage')
-            } else {
+            } else if(response.status===401){
+                logoutUser()
+            }else {
                 alert('Erreur: Numéro déjà utilisé');
             }
         }

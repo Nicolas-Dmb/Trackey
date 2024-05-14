@@ -6,6 +6,7 @@ function ModifKey({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
     let{user}= contextData
+    let{logoutUser} = contextData;
     //Copropriete
     const location = useLocation()
     const {key, copropriete} = location.state || {}
@@ -37,7 +38,9 @@ function ModifKey({setTitle}){
         })
         if (response.ok) {
             setfirstRender(false)
-        } else {
+        } else if (response.status===401){
+            logoutUser()
+        }else {
             alert('Numéro de clé déjà utilisée');
         }
     }

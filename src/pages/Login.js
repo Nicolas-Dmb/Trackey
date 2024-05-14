@@ -3,11 +3,14 @@ import AuthContext from'../context/AuthContext'
 import {Link} from "react-router-dom"
 
 function Login({setTitle}){
-    useEffect(()=>{
-        setTitle(<h1>Connexion</h1>)
-    },[])
     const{contextData} = useContext(AuthContext)
     let{loginUser} = contextData; 
+    let{logoutUser} = contextData;
+    useEffect(()=>{
+        setTitle(<h1>Connexion</h1>)
+        logoutUser()
+    },[])
+
     
     return (
     <div className='Main'>

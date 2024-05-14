@@ -8,6 +8,7 @@ import {ValidEmail, ValidMP, ValidMPconf} from '../components/ValidData';
 function ChangePassword({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     //state pour savoir si on met ou non le popup
     const[popup, setPopup] = useState(true)
     
@@ -46,6 +47,8 @@ function ChangePassword({setTitle}){
             navigate('/account')
         }else if(response.status === 408){
             setPopup(true)
+        }else if (response.status===401){
+            logoutUser()
         }else{
             let responseData = await response.json();
             if (responseData.old_password) {

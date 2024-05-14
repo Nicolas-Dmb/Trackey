@@ -7,6 +7,7 @@ import PopupOTP from '../components/PopupOTP';
 function DeleteCommonKey({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     const[popup, setPopup] = useState(true)
     //information du compte 
     const location = useLocation()
@@ -30,7 +31,9 @@ function DeleteCommonKey({setTitle}){
         });
     if (response.status===204){
         navigate(`/Copropriete/${IdCopropriete}`)
-    } else {
+    } else if (response.status===401){
+        logoutUser()
+    }else {
         alert("Une erreur s'est produite");
     }}
 

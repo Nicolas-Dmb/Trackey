@@ -14,6 +14,7 @@ function DetailCommonKey({setTitle}){
     //Auth
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     //Variable
     const {IdCopropriete, IdKey} = useParams()
     const[key, setKey] = useState([])
@@ -30,9 +31,12 @@ function DetailCommonKey({setTitle}){
                 'Authorization': `Bearer ${authTokens.access}`},
         });
         let data = await response.json()
-        setKey(data)
-        setTracks(data.trackcommon_set)
-       }
+        if(response.ok){
+            setKey(data)
+            setTracks(data.trackcommon_set)
+        }else if (response.status===401){
+            logoutUser()
+        }}
     
     useEffect(()=>{
         getKey()

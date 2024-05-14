@@ -43,12 +43,12 @@ function App(){
           <Header className='Header' title={title}/>
           <Routes>
             <Route element={<Accueil setTitle={setTitle}/>} path='/' exact/>
-            <Route element={<PrivateRoute><HomePage setTitle={setTitle}/></PrivateRoute>} path='/Homepage' exact/>
-            <Route element={<PrivateRoute><Account setTitle={setTitle}/></PrivateRoute>} path='/account' exact/>
-            <Route element={<PrivateRoute><DeleteAccount setTitle={setTitle}/></PrivateRoute>} path='/account/delete' exact/>
-            <Route element={<PrivateRoute><ChangeAccount setTitle={setTitle}/></PrivateRoute>} path='/account/Modif' exact/>
-            <Route element={<PrivateRoute><ChangePassword setTitle={setTitle}/></PrivateRoute>} path='/account/Password' exact/>
-            <Route element={<PrivateRoute><DetailCopro setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete' exact/>
+            <Route element={<PrivateRoute><HomePage setTitle={setTitle}/></PrivateRoute>} path='/Homepage'/>
+            <Route element={<PrivateRoute><Account setTitle={setTitle}/></PrivateRoute>} path='/account'/>
+            <Route element={<PrivateRoute><DeleteAccount setTitle={setTitle}/></PrivateRoute>} path='/account/delete'/>
+            <Route element={<PrivateRoute><ChangeAccount setTitle={setTitle}/></PrivateRoute>} path='/account/Modif'/>
+            <Route element={<PrivateRoute><ChangePassword setTitle={setTitle}/></PrivateRoute>} path='/account/Password'/>
+            <Route element={<PrivateRoute><DetailCopro setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete'/>
             <Route element={<PrivateRoute><CreateCopro setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/Create'/>
             <Route element={<PrivateRoute><CreateManyCopro setTitle={setTitle}/></PrivateRoute>} path='/listeCoproprietes/Create'/>
             <Route element={<PrivateRoute><ModifCopro setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete/Modif'/>
@@ -61,9 +61,9 @@ function App(){
             <Route element={<PrivateRoute><DeleteCommonKey setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete/CommonKey/:IdKey/Delete'/>
             <Route element={<PrivateRoute><DeletePrivateKey setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete/PrivateKey/:IdKey/Delete'/>
             <Route element={<PrivateRoute><ModifPrivateKey setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/:IdCopropriete/PrivateKey/:IdKey/Modif'/>
-            <Route element={<PrivateRoute><CreateTrackCommon setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/CommonKey/track/:IdKey/'/>
+            <Route element={<CreateTrackCommon setTitle={setTitle}/>} path='/Copropriete/CommonKey/track/:IdKey/'/>
             <Route element={<PrivateRoute><ReturnTrackCommon setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/CommonKey/Returntrack/:IdKey/'/>
-            <Route element={<PrivateRoute><CreateTrackPrivate setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/PrivateKey/track/:IdKey/'/>
+            <Route element={<CreateTrackPrivate setTitle={setTitle}/>} path='/Copropriete/PrivateKey/track/:IdKey/'/>
             <Route element={<PrivateRoute><ReturnTrackPrivate setTitle={setTitle}/></PrivateRoute>} path='/Copropriete/PrivateKey/Returntrack/:IdKey/'/>
             <Route element={<Login setTitle={setTitle}/>} path='/login'/>
             <Route element={<MPoublie setTitle={setTitle}/>} path='/MPoublie'/>

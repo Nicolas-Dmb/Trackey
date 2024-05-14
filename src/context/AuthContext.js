@@ -97,6 +97,8 @@ export const AuthProvider = ({children}) => {
 
         }else if(response.status===304){
             
+        }else if(response.status===401){
+            logoutUser
         }else{
             alert(`error : ${response}`)
         }

@@ -35,6 +35,8 @@ function DeleteAccount({setTitle}){
             alert("code du mail invalide");
         } else if(response.status === 408){
             alert("Utilisateur non identifié")
+        }else if (response.status===401){
+            logoutUser()
         }else{
             alert("Demande invalide")
         }}

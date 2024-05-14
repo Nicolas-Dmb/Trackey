@@ -7,7 +7,7 @@ function Account({setTitle}){
 
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
-
+    let{logoutUser} = contextData;
     let navigate = useNavigate()
 
     const [account, setAccount] = useState()
@@ -27,7 +27,9 @@ function Account({setTitle}){
             let data = await response.json()
             if (response.ok) {
                 setAccount(data); 
-            } else {
+            } else if (response.status === 401){
+                logoutUser()
+            }else {
                 alert(`erreur:${response.error}`)
             }}
 

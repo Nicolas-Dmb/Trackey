@@ -7,6 +7,7 @@ import {downloadCommonQRCode ,downloadPrivateQRCode, downloadQRCode} from '../ut
 function DetailCopro({setTitle}){
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     //On récupère la copropriété clické par l'user 
     const {IdCopropriete} = useParams()
     const[copropriete, setCopropriete] = useState([])
@@ -25,7 +26,9 @@ function DetailCopro({setTitle}){
             setCopropriete(data);
             setCommonkeys(data.commonkey_set || []);
             setPrivatekeys(data.privatekey_set || []);
-        } else {
+        } else if (response.status===401){
+            logoutUser()
+        }else {
             alert("Créer vos premières clés");
         }}
 

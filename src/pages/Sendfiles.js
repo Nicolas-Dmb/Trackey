@@ -10,6 +10,7 @@ function CreateManyCopro({setTitle}){
 
     const{contextData} = useContext(AuthContext)
     let{authTokens} = contextData; 
+    let{logoutUser} = contextData;
     let[errors, setErrors] = useState()
 
     let CreateCopro = async(e ) =>{
@@ -27,6 +28,8 @@ function CreateManyCopro({setTitle}){
                 setErrors('Fichier Excel traité avec succès.')
             }else if(response.status === 206){
                 setErrors(retour)
+            }else if (response.status===401){
+                logoutUser()
             }else{
                 setErrors("Une erreur s'est produite avec le fichier assurez-vous d'utiliser le model fourni")
             }
