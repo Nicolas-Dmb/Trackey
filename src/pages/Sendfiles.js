@@ -39,7 +39,7 @@ function CreateManyCopro({setTitle}){
             </div>
             <h3 style={{margin:'2px'}}>Implémenter toutes vos copropriétés rapidement.</h3>
             <h3 style={{margin:'2px'}}>Pour cela vous devez compléter ce fichier</h3>
-            <p><a href='/Liste_coproprietes.csv' download='liste_coproprietes.csv' type="text/csv">Liste copropriétés</a></p>
+            <p><a href='/liste_coproprietes.csv' download='liste_coproprietes.csv'>Liste copropriétés</a></p>
             <h3 style={{margin:'2px'}}>Puis l'envoyer via le questionnaire ci-dessous :</h3>
         <form style={{marginTop:'20px'}}onSubmit={CreateCopro}>
             <p style={{color:'red'}}>{errors}</p>
