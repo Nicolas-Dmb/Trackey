@@ -32,6 +32,7 @@ import ModifKey from './pages/ModifKey.js';
 import PrivateRoute from './utils/PrivateRoute';
 import Header from './components/Header'
 import CreateManyCopro from './pages/Sendfiles.js';
+import Donnees from './pages/Donnees.js'
 
 
 function App(){
@@ -70,6 +71,7 @@ function App(){
             <Route element={<NewMP setTitle={setTitle}/>} path='/MotdePasseOublie/:token'/>
             <Route element={<SignIn setTitle={setTitle}/>} path='/signIn' />
             <Route element={<Contact setTitle={setTitle}/>} path='/Contact'/>
+            <Route element={<Donnees setTitle={setTitle}/>} path='/Donnees'/>
           </Routes>
         </AuthProvider>
       </Router>

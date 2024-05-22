@@ -36,6 +36,7 @@ function Header({title}){
                             <Link to="/account">Mon compte</Link>
                             <Link to='/login' onClick={()=>{logoutUser(); setListaccount('none')}}>Logout</Link>
                             <Link to='/contact'>Contact</Link>
+                            <Link to='/Donnees'>Protection des données</Link>
                         </div>
                 </React.Fragment>
             ):(

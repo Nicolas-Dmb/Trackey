@@ -32,6 +32,7 @@ function Accueil({setTitle}){
                 <p>Vous pouvez me transmettre vos questions par mail :</p>
                 <p className='mail'>contact@trackey.fr</p>
             </div>
+            <Link to={`/Donnees`} className='create_key'><button>Protection des données</button></Link>
         </div>
     </div>
     )
