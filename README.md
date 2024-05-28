@@ -14,6 +14,4 @@ Cette partie web permet aux utilisateurs de gérer leurs données et de les cons
 - gérer le compte,
 
 
-C'est la partie web app de mon projet Trackey. Le site est accessible via ce lien : [Trackey](https://trackey.fr/)
-
 [![Vidéo de présentation](https://github.com/Nicolas-Dmb/Trackey/blob/main/public/video.png)](https://www.youtube.com/watch?v=wtl7L5LCQL8) 
