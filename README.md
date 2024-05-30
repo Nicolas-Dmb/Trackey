@@ -15,3 +15,9 @@ Cette partie web permet aux utilisateurs de gérer leurs données et de les cons
 
 
 [![Vidéo de présentation](https://github.com/Nicolas-Dmb/Trackey/blob/main/public/video.png)](https://www.youtube.com/watch?v=wtl7L5LCQL8) 
+
+
+# Points à amélliorer : 
+- Face ID,
+- Gestion de la création de compte avec lien facile vers les gestionnaires de mot de passe pour suggestion de mot de passe,
+- Design de l'app,
