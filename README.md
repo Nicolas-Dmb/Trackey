@@ -18,6 +18,5 @@ Cette partie web permet aux utilisateurs de gérer leurs données et de les cons
 
 
 # Points à amélliorer : 
-- Face ID,
 - Gestion de la création de compte avec lien facile vers les gestionnaires de mot de passe pour suggestion de mot de passe,
 - Design de l'app,
