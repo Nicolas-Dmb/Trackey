@@ -20,3 +20,4 @@ Cette partie web permet aux utilisateurs de gérer leurs données et de les cons
 # Points à amélliorer : 
 - Gestion de la création de compte avec lien facile vers les gestionnaires de mot de passe pour suggestion de mot de passe,
 - Design de l'app,
+- Créer un tuto de navigation dans le site et un lien pour télécharger l'app mobile, 
